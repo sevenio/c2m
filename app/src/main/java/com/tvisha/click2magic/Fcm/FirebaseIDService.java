@@ -4,10 +4,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.FirebaseMessagingService;
 
 
-public class FirebaseIDService
-{
+public class FirebaseIDService extends  FirebaseMessagingService{
 
     private static final String TAG = "FirebaseIDService";
     public static String token = "",tm_user_id="",user_id="",company_token="";

@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity  {
 
 
 
-          getDeviceId();
+          getdeviceId();
 
 
     }
@@ -162,7 +162,7 @@ public class LoginActivity extends AppCompatActivity  {
         }
     }
 
-    private void getDeviceId() {
+    private void getdeviceId() {
 
         deviceId =  Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
         Session.saveDeviceId(LoginActivity.this,deviceId);
