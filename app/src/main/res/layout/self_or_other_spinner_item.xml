@@ -1,0 +1,9 @@
+<com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/very_small_padding"
+    android:textColor="@color/user_spineer_color"
+    android:textSize="@dimen/dropdown_text" />

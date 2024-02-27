@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linkLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/pageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/page_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:singleLine="true"
+                android:textSize="@dimen/small_text"
+                android:textColor="@color/visitHistoryPageNameColor"
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/page_name_tv"
+                android:layout_alignStart="@+id/page_name_tv"
+                android:layout_alignEnd="@+id/page_name_tv"
+                android:background="@color/visitHistoryPageNameColor"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/urlImageLayout"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:paddingRight="3dp"
+            app:srcCompat="@drawable/external_link_symbol"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+        android:id="@+id/data_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Jun, 12:46:09"
+        android:textSize="@dimen/small_text"
+        android:textColor="@color/visitHistoryGreyColor"
+        />
+        <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  |  "
+            android:textSize="@dimen/small_text"
+            android:textColor="@color/visitHistoryGreyColor"
+            />
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02:20"
+            android:textSize="@dimen/small_text"
+            android:textColor="@color/visitHistoryGreyColor"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/visitHistoryLineColor"/>
+</LinearLayout>

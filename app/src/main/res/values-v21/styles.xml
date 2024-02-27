@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#148E13</item>
+
+    </style>
+
+    <style name="switchStyle">
+        <!-- working 100%-->
+        <!-- colorPrimary is used for the default action bar background -->
+        <!-- circle color-->
+        <item name="thumbTint">@drawable/switch_thumb_color</item>
+        <!-- bg line color-->
+        <item name="trackTint">@drawable/switch_color</item>
+    </style>
+
+</resources>

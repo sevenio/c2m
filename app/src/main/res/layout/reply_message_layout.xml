@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/reply_message_layout_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/reply_message_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:singleLine="true"
+                android:textColor="@color/replyMessageColor"
+                android:text="Me"/>
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/reply_message_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:textColor="@color/replyMessageColor"
+                android:text="Message"/>
+
+            <LinearLayout
+                android:id="@+id/replyAttachmentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/attachmentImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/ic_attachment_img"/>
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                    android:id="@+id/attachment_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/small_text"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="visible"
+                    android:textColor="@color/replyMessageColor"
+                    android:text=""/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cancelReplyLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/ic_cancel_reply"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

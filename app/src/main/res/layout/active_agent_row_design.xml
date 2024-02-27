@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+        android:id="@+id/agent_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/agent_title"
+        android:layout_marginLeft="@dimen/very_small_margin"
+        android:background="@drawable/active_agent_row_bg"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="name"
+        android:textColor="@color/filterValueColor"
+        android:textSize="@dimen/very_small_text" />
+
+
+</LinearLayout>

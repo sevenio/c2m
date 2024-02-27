@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Click2Magic</string>
+    <string name="alphabets">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&#160;</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="username_email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="type_message">Type your Message...</string>
+    <string name="canned_response">Canned Response</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="notification">Notification</string>
+    <string name="archives">Archives</string>
+    <string name="archive">Archive</string>
+    <string name="logout">&#160; Logout</string>
+
+    <string-array name="reuest_array">
+        <item>Request</item>
+        <item>Phone</item>
+        <item>Email</item>
+    </string-array>
+
+    <string name="loading">Loading</string>
+    <string name="canned_msg">Canned msg</string>
+    <string name="attachment">Attachment</string>
+    <string name="agents">Agents</string>
+    <string name="self">Self</string>
+    <string name="all">All</string>
+    <string name="visitor_queue">Visitor Queue</string>
+    <string name="no_agent_connected">No Agent Connected</string>
+    <string name="no_visitor_connected">No Visitor in queue</string>
+    <string name="no_media">No Media</string>
+    <string name="done">Done</string>
+    <string name="back">Back</string>
+    <string name="send">Send</string>
+    <string name="reject">Reject</string>
+
+    <string name="reject_info">Please write your reason for rejecting..</string>
+    <string name="accept">Accept</string>
+    <string name="transfer">Transfer</string>
+    <string name="notes">Notes</string>
+    <string name="screenshot">Screenshot</string>
+    <string name="request">request</string>
+    <string name="contact">Contact</string>
+    <string name="share">Share</string>
+    <string name="collateral">Collateral</string>
+    <string name="copy">copy</string>
+    <string name="confirm">confirm</string>
+    <string name="request_s">request</string>
+    <string name="links">Links</string>
+    <string name="info">Info</string>
+    <string name="INFO">INFO</string>
+    <string name="END_CHAT">END CHAT</string>
+    <string name="chat">Chat</string>
+    <string name="end">End</string>
+    <string name="transfering_chat">Transferring Chat</string>
+    <string name="welcome_back">Welcome Back</string>
+
+    <string name="pref_vibrate">Vibrate</string>
+    <string name="pref_notification_tone">Notification</string>
+    <string name="please_wait_process">Please wait while we sync your messages. This process may take some time. Please be patient</string>
+
+    <string name="default_notification_channel_id">1</string>
+    <string name="default_notification_channel_name">Click2Magic</string>
+    <string name="default_notification_description">All important updates</string>
+    <string name="image">Image</string>
+    <string name="gallery">Gallery</string>
+    <string name="assign_chat">Assign Chat</string>
+    <string name="assign">Assign</string>
+    <string name="title_activity_basic">BasicActivity</string>
+    <string name="title_activity_conversation">ConversationActivity</string>
+
+    <string name="pic_from_camera">Pick from Camera</string>
+    <string name="pic_from_gallary">Pick from Gallery</string>
+    <string name="remove_photo">Remove Photo</string>
+    <string name="category">Categories</string>
+    <string name="quality">Quality</string>
+    <string name="na">NA</string>
+    <string name="submit">Submit</string>
+
+    <string name="deactivate">deactivate</string>
+    <string name="send_offline">Send Offline</string>
+
+
+
+
+</resources>

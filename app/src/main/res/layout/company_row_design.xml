@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="?actionBarSize"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/siteNameLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+            android:id="@+id/company_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="TVISHA"
+            android:textAllCaps="true"
+            android:singleLine="true"
+            android:textColor="@color/single_chat_comapny_name_color"
+            android:textSize="@dimen/small_text" />
+
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+            android:id="@+id/unread_count_tv"
+            android:layout_width="@dimen/company_unread_count_size"
+            android:layout_height="@dimen/company_unread_count_size"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/single_chat_unread_count_bg_oval"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/single_chat_site_unread_count_color"
+            android:textSize="@dimen/micro_text"
+            android:visibility="visible" />
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/company_unread_count_size"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/single_chat_unread_count_bg_oval"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/single_chat_active_color"
+            android:textSize="@dimen/micro_text" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+
+        android:layout_alignRight="@+id/siteNameLay"
+        android:layout_alignLeft="@+id/siteNameLay"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/single_chat_site_view_color"/>
+
+</RelativeLayout>

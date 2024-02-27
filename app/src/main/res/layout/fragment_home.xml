@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/agentNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mode_spiiner_bg_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:id="@+id/selected_agent_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/defultSpacing"
+                android:visibility="visible"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/left_transparent_color_view"
+                android:text=""/>
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/visitor_company_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:paddingTop="@dimen/small_padding"
+            />
+        <!--android:nestedScrollingEnabled="false"-->
+
+    </LinearLayout>
+
+</RelativeLayout>

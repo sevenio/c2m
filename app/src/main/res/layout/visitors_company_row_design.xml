@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/site_name_border_shadow_view"
+    android:layout_marginBottom="@dimen/very_small_margin"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/statusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="18dp"
+            android:paddingTop="7dp"
+            android:layout_margin="1dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="7dp"
+            android:weightSum="3">
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:id="@+id/company_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TVISHA"
+                        android:textAllCaps="true"
+                        android:textColor="@color/comapny_name_color"
+                        android:textSize="@dimen/normal_text" />
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:id="@+id/agents_active_count_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textColor="@color/agentCountColor"
+                        android:textSize="@dimen/very_small_text" />
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:id="@+id/agents_count_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="0 Agents"
+                        android:textColor="@color/agentCountColor"
+                        android:textSize="@dimen/very_small_text" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/activie_agents_recycler_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/changeStatusLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="end">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/status"
+                    style="@style/switchStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:layoutDirection="ltr"
+                    android:paddingRight="7dp"
+                    android:showText="false"
+                    android:textOff="Dormant"
+                    android:textOn="Live"
+                    android:textSize="@dimen/small_text"
+                    android:visibility="gone" />
+
+                <com.tvisha.click2magic.Helper.progressButton.ProgressButton
+                    android:id="@+id/status1"
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/offline" />
+
+                <com.tvisha.click2magic.Helper.progressButton.ProgressButton
+                    android:id="@+id/progressButton"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    />
+
+
+
+
+                <!--android:theme="@style/SwitchTheme"-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="8dp">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/activeChatUserLineColor"
+                android:visibility="visible" />
+        </FrameLayout>
+        <!--    android:layout_marginRight="@dimen/defultSpacing"-->
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activie_chat_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/defultSpacing"
+                    android:fadeScrollbars="false"
+                    android:paddingBottom="8dp"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- android:layout_marginLeft="@dimen/defultSpacing"
+           android:nestedScrollingEnabled="true"-->
+
+        <ImageView
+            android:id="@+id/no_chats_image"
+            android:layout_width="@dimen/no_data_image_size"
+            android:layout_height="@dimen/no_data_image_size"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/no_visitors"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

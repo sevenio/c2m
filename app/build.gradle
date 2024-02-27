@@ -1,0 +1,134 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.tvisha.click2magic"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 15
+        versionName "1.1.5"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '28.0.2'
+    ndkVersion '20.1.5948944'
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    // Android support libraries
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:multidex:1.0.3'
+    testImplementation 'junit:junit:4.12'
+    // optional - Test helpers for LiveData
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.2'
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    // Network
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    // Google
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    // implementation 'com.google.android.gms:play-services-analytics:16.0.5'
+    implementation("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'androidx.annotation:annotation:1.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation("com.github.bumptech.glide:glide:4.9.0@aar") {
+        transitive = true
+    }
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.4'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    //firebase
+//    implementation 'com.google.firebase:firebase-core:16.0.8'
+
+    implementation("com.google.firebase:firebase-messaging:17.3.4") {
+        exclude group: 'com.google.firebase', module: 'firebase-iid'
+    }
+    //for storing list in shared preferences
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.android.gms:play-services-gcm:10.2.1'
+    //Simple rating bar
+    implementation 'com.iarcuschin:simpleratingbar:0.1.5'
+    //FlowLayout
+    implementation 'com.xiaofeng.android:flowlayoutmanager:1.2.3.2'
+    //aws
+    implementation 'com.amazonaws:aws-android-sdk-core:2.6.14'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.14'
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.6.14'
+    implementation 'com.amazonaws:aws-android-sdk-ddb:2.6.14'
+    testImplementation 'junit:junit:4.12'
+    implementation('com.amazonaws:aws-android-sdk-mobile-client:2.6.7@aar') { transitive = true }
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.6.+'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.+'
+    //crop
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    //compress
+    implementation 'id.zelory:compressor:2.1.0'
+    //to get file path
+    implementation 'in.gauriinfotech:commons:1.0.8'
+    //to load an image
+    implementation 'com.theartofdev:fast-image-loader:0.8.+'
+    //tooltip
+    implementation 'com.github.douglasjunior:android-simple-tooltip:0.2.2'
+
+    //tool-tip
+    implementation 'com.github.vihtarb:tooltip:0.2.0'
+
+    //tooltip
+    implementation 'com.github.florent37:viewtooltip:1.0.0'
+    //app update
+    implementation 'com.google.android.play:core:1.5.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    implementation 'com.google.firebase:firebase-ml-natural-language-translate-model:19.0.0'
+    implementation 'com.google.firebase:firebase-ml-natural-language:19.0.0'
+    implementation 'com.google.firebase:firebase-ml-natural-language-language-id-model:19.0.0'
+    implementation "com.google.firebase:firebase-iid:17.0.4"
+
+    implementation 'com.itextpdf:itextpdf:5.0.6'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

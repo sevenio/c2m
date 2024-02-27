@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/small_padding">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/cancelCannedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="@dimen/very_small_padding">
+
+                <ImageView
+                    android:id="@+id/cancelImage"
+                    android:layout_width="@dimen/cancel_image_size"
+                    android:layout_height="@dimen/cancel_image_size"
+                    android:layout_gravity="end"
+                    app:srcCompat="@drawable/cancel_img" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/cancelCannedLayout"
+            android:layout_marginTop="@dimen/very_small_margin"
+            android:layout_weight="1"
+            android:background="@drawable/canned_message_dialog_bg"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/canned_messages_bg"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/large_padding"
+                android:paddingTop="@dimen/medium_padding"
+                android:paddingRight="@dimen/large_padding"
+                android:paddingBottom="@dimen/small_padding"
+                android:visibility="visible">
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Canned Responses"
+                    android:textColor="@color/colorPrimaryDark" />
+
+
+                <LinearLayout
+                    android:id="@+id/cannedMessageSearchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/very_small_margin"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:background="@drawable/canned_messages_search_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingTop="@dimen/very_small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:paddingBottom="@dimen/very_small_padding">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_search" />
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                        android:id="@+id/canned_message_search_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:hint="Search"
+                        android:paddingLeft="@dimen/very_small_padding"
+                        android:textColor="#657185"
+                        android:textSize="@dimen/small_text" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:id="@+id/no_data_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Data"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normal_text"
+                android:visibility="gone" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/canned_message_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:paddingLeft="@dimen/large_padding"
+                    android:paddingRight="@dimen/large_padding"
+                    android:paddingBottom="@dimen/small_padding"/>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

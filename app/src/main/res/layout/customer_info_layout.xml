@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/info_white_bg"
+    android:layout_marginLeft="@dimen/small_margin"
+    android:layout_marginRight="@dimen/small_margin"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+   >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Info"
+            android:textColor="@color/customer_info_color"
+            android:visibility="visible"
+            android:textAllCaps="true"
+            android:textSize="@dimen/medium_text" />
+
+
+
+
+        <!--android:layout_height="?actionBarSize"-->
+
+    </LinearLayout>
+
+
+    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+        android:id="@+id/customer_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Tekula Mounika"
+        android:visibility="gone"
+
+        android:textColor="@color/customer_info_name_color"
+        android:textSize="@dimen/medium_text" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/user_info_border_bg"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_5"
+                    android:paddingRight="@dimen/padding_5"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/customer_info_icon_size"
+                            android:layout_height="@dimen/customer_info_icon_size"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/agent_icon" />
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Name"
+                            android:singleLine="true"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal">
+
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text=":"
+                            android:singleLine="true"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.8"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+
+
+                            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                                android:id="@+id/info_agent_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:singleLine="true"
+                                android:textColor="@color/customer_info_description_color"
+                                android:textSize="@dimen/small_text" />
+
+                        </HorizontalScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/activeChatUserLineColor"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_5"
+                    android:paddingRight="@dimen/padding_5"
+                    android:weightSum="3">
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/customer_info_icon_size"
+                            android:layout_height="@dimen/customer_info_icon_size"
+                            android:visibility="gone"
+                            android:src="@drawable/email" />
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:text="Email"
+
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal">
+
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text=":"
+                            android:singleLine="true"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/emailLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.8"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+                            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                                android:id="@+id/email_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="mounika@gmail.com"
+                                android:singleLine="true"
+                                android:textColor="@color/customer_info_description_color"
+                                android:textSize="@dimen/small_text" />
+
+                        </HorizontalScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@color/activeChatUserLineColor" />
+
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_5"
+                    android:paddingRight="@dimen/padding_5"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/customer_info_icon_size"
+                            android:layout_height="@dimen/customer_info_icon_size"
+                            android:visibility="gone"
+                            android:src="@drawable/phone" />
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Phone"
+
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal">
+
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text=":"
+                            android:singleLine="true"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/phoneNumberLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.8"
+
+                        android:orientation="horizontal">
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:scrollbars="none">
+
+
+                            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                                android:id="@+id/phone_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="9182864015"
+                                android:singleLine="true"
+                                android:textColor="@color/customer_info_description_color"
+                                android:textSize="@dimen/small_text" />
+
+                        </HorizontalScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/activeChatUserLineColor"
+                    android:visibility="visible" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_5"
+                    android:paddingRight="@dimen/padding_5"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/customer_info_icon_size"
+                            android:layout_height="@dimen/customer_info_icon_size"
+                            android:visibility="gone"
+                            android:src="@drawable/location" />
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Location"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal">
+
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text=":"
+                            android:singleLine="true"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.8"
+                        android:orientation="horizontal">
+
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+
+                            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                                android:id="@+id/location_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="Nalgonda"
+                                android:singleLine="true"
+                                android:textColor="@color/customer_info_description_color"
+                                android:textSize="@dimen/small_text" />
+
+                        </HorizontalScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/activeChatUserLineColor"
+                    android:visibility="visible" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_5"
+                    android:paddingRight="@dimen/padding_5"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/customer_info_icon_size"
+                            android:layout_height="@dimen/customer_info_icon_size"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_msg_pending" />
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Start Time"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal">
+
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text=":"
+                            android:singleLine="true"
+                            android:textColor="@color/customer_info_title_color"
+                            android:textSize="@dimen/info_title_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.8"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+
+
+                            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                                android:id="@+id/start_time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:singleLine="true"
+                                android:textColor="@color/customer_info_description_color"
+                                android:textSize="@dimen/small_text" />
+
+                        </HorizontalScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/user_info_border_bg"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:orientation="vertical">
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/customer_info_icon_size"
+                android:layout_height="@dimen/customer_info_icon_size"
+                android:visibility="gone"
+                android:src="@drawable/os" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="OS"
+                android:textColor="@color/customer_info_title_color"
+                android:textSize="@dimen/info_title_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=":"
+                android:singleLine="true"
+                android:textColor="@color/customer_info_title_color"
+                android:textSize="@dimen/info_title_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1.8"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:id="@+id/os_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Microsoft Windows 10"
+                android:singleLine="true"
+                android:textColor="@color/customer_info_description_color"
+                android:textSize="@dimen/small_text" />
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/activeChatUserLineColor" />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_5"
+            android:paddingRight="@dimen/padding_5"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/customer_info_icon_size"
+                    android:layout_height="@dimen/customer_info_icon_size"
+                    android:visibility="gone"
+                    android:src="@drawable/link" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Entry"
+                    android:textColor="@color/customer_info_title_color"
+                    android:textSize="@dimen/info_title_text" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:orientation="horizontal">
+
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=":"
+                    android:singleLine="true"
+                    android:textColor="@color/customer_info_title_color"
+                    android:textSize="@dimen/info_title_text" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1.8"
+                android:orientation="horizontal">
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:id="@+id/entry_url_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="https://www.tvisha.com"
+                        android:singleLine="true"
+                        android:textColor="@color/customer_info_description_color"
+                        android:textSize="@dimen/small_text" />
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/activeChatUserLineColor" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="@dimen/padding_5"
+            android:paddingRight="@dimen/padding_5"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/customer_info_icon_size"
+                    android:layout_height="@dimen/customer_info_icon_size"
+                    android:visibility="gone"
+                    android:src="@drawable/browser" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Browser"
+                    android:textColor="@color/customer_info_title_color"
+                    android:textSize="@dimen/info_title_text" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:orientation="horizontal">
+
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=":"
+                    android:singleLine="true"
+                    android:textColor="@color/customer_info_title_color"
+                    android:textSize="@dimen/info_title_text" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1.8"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:id="@+id/browser_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Chrome (63.0.3239.84)"
+                        android:singleLine="true"
+                        android:textColor="@color/customer_info_description_color"
+                        android:textSize="@dimen/small_text" />
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/activeChatUserLineColor" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/customer_info_icon_size"
+                android:layout_height="@dimen/customer_info_icon_size"
+                android:visibility="gone"
+                android:src="@drawable/ip" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Ip"
+                android:textColor="@color/customer_info_title_color"
+                android:textSize="@dimen/info_title_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=":"
+                android:singleLine="true"
+                android:textColor="@color/customer_info_title_color"
+                android:textSize="@dimen/info_title_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1.8"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:id="@+id/ip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="10.2.3.255"
+                android:singleLine="true"
+                android:textColor="@color/customer_info_description_color"
+                android:textSize="@dimen/small_text" />
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:visibility="gone"
+        android:background="@color/activeChatUserLineColor" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/customer_info_icon_size"
+                android:layout_height="@dimen/customer_info_icon_size"
+                android:visibility="gone"
+                android:src="@drawable/history" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="History"
+                android:textColor="@color/customer_info_title_color"
+                android:textSize="@dimen/info_title_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=":"
+                android:singleLine="true"
+                android:textColor="@color/customer_info_title_color"
+                android:textSize="@dimen/info_title_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1.8"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:id="@+id/history_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="4th Visit"
+                android:singleLine="true"
+                android:textColor="@color/customer_info_description_color"
+                android:textSize="@dimen/small_text" />
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/activeChatUserLineColor"
+        android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/visitPagesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Latest Visit - Pages Visited"
+                    android:textColor="@color/customer_info_name_color"
+                    android:visibility="visible"
+                    android:textSize="@dimen/medium_text" />
+
+
+
+
+                <!--android:layout_height="?actionBarSize"-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/user_info_border_bg"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:orientation="vertical">
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_5"
+                    android:paddingRight="@dimen/padding_5"
+                    android:weightSum="3">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/visit_pages_recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/closeInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+              >
+
+
+                <ImageView
+                    android:id="@+id/screenshotImage"
+                    android:layout_width="@dimen/cancel_image_size"
+                    android:layout_height="@dimen/cancel_image_size"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="7dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_screenshot" />
+
+
+                <ImageView
+                    android:id="@+id/info_close_icon"
+                    android:layout_width="@dimen/cancel_image_size"
+                    android:layout_height="@dimen/cancel_image_size"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_close" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                    android:id="@+id/info_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close "
+                    android:textAllCaps="false"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:textColor="@color/agentCountColor"
+                    android:textSize="@dimen/small_text" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

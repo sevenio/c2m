@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.FilterActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_shadow_view">
+
+        <include layout="@layout/common_white_bg_actionbar" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/agentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/very_large_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingRight="@dimen/very_large_padding"
+            android:paddingBottom="@dimen/small_padding"
+            android:visibility="visible"
+
+            >
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/agent_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:text="Agent"
+                android:textColor="@color/filterTextColor"
+                android:textSize="@dimen/small_text" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selected_agents_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/agent_title" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/agent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/agent_title"
+                android:layout_marginTop="@dimen/very_small_margin"
+                android:textColor="@color/filterValueColor"
+                android:textSize="@dimen/very_small_text" />
+
+
+            <!-- android:dropDownVerticalOffset="20dp"-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:layout_width="@dimen/rignt_arrow_image_size"
+                    android:layout_height="@dimen/rignt_arrow_image_size"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/large_margin"
+                    android:gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_arrow_point_to_right" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/activeChatUserLineColor" />
+
+        <RelativeLayout
+            android:id="@+id/propertyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/very_large_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingRight="@dimen/very_large_padding"
+            android:paddingBottom="@dimen/small_padding"
+            android:visibility="visible"
+
+            >
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/property_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:text="Property"
+                android:textColor="@color/filterTextColor"
+                android:textSize="@dimen/small_text" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selected_property_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/property_title"
+                android:visibility="visible" />
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/property_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/property_title"
+                android:layout_marginTop="@dimen/very_small_margin"
+                android:textColor="@color/filterValueColor"
+                android:textSize="@dimen/very_small_text" />
+
+            <!-- android:dropDownVerticalOffset="20dp"-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:layout_width="@dimen/rignt_arrow_image_size"
+                    android:layout_height="@dimen/rignt_arrow_image_size"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/large_margin"
+                    android:gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_arrow_point_to_right" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/activeChatUserLineColor" />
+
+
+        <LinearLayout
+            android:id="@+id/dateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/very_large_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingRight="@dimen/very_large_padding"
+            android:paddingBottom="@dimen/small_padding"
+            android:visibility="visible"
+
+            >
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:id="@+id/filter_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="Date"
+                android:textColor="@color/filterTextColor"
+                android:textSize="@dimen/small_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_date_title"
+                android:layout_marginTop="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2.3">
+
+                <LinearLayout
+                    android:id="@+id/fromDateLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/filter_calender_rect_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/small_padding">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/small_calendar" />
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                        android:id="@+id/from_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/very_small_margin"
+                        android:hint="From"
+                        android:textColor="@color/filterTextColor"
+                        android:textSize="@dimen/small_text" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/small_padding">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#eaeaea" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/toDateLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/filter_calender_rect_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/small_padding">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/small_calendar" />
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                        android:id="@+id/to_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/very_small_margin"
+                        android:hint="To"
+                        android:textColor="@color/filterTextColor"
+                        android:textSize="@dimen/small_text" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/activeChatUserLineColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumButton
+                android:id="@+id/actionApply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/filterButtonColor"
+                android:gravity="center"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/agentsSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/medium_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingRight="@dimen/medium_padding"
+            android:paddingBottom="@dimen/small_padding">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_search" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                android:id="@+id/agent_search_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/medium_padding"
+                android:textColor="#657185"
+                android:textSize="@dimen/small_text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:background="@color/activeChatUserLineColor" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/agents_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:layout_marginRight="@dimen/padding_5"
+                android:layout_marginBottom="40dp" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumButton
+                android:id="@+id/actionAgentSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/filterButtonColor"
+                android:gravity="center"
+                android:text="Select"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/propertySearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/medium_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingRight="@dimen/medium_padding"
+            android:paddingBottom="@dimen/small_padding">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_search" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                android:id="@+id/property_search_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/medium_padding"
+                android:textColor="#657185"
+                android:textSize="@dimen/small_text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/padding_5"
+            android:layout_marginRight="@dimen/padding_5"
+            android:background="@color/activeChatUserLineColor" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/property_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:layout_marginRight="@dimen/padding_5"
+                android:layout_marginBottom="40dp" />
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumButton
+                android:id="@+id/actionSiteSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/filterButtonColor"
+                android:gravity="center"
+                android:text="Select"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

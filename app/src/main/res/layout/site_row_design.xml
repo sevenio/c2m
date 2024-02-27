@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="15dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/siteNameLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+            android:id="@+id/company_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="1dp"
+            android:text="TVISHA"
+            android:textAllCaps="true"
+            android:singleLine="true"
+            android:textColor="@color/archive_site_name_color"
+            android:textSize="@dimen/small_text" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@color/archive_site_name_line_color"
+        android:layout_below="@+id/siteNameLay"
+        android:layout_alignLeft="@+id/siteNameLay"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignRight="@+id/siteNameLay"/>
+
+</RelativeLayout>

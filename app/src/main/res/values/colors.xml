@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--  <color name="colorPrimary">#5b8ea5</color>-->
+    <color name="colorPrimary">#5b8ea5</color>
+    <color name="colorPrimaryDark">#2b3e64</color>
+  <!--<color name="colorPrimaryDark">#2b3e64</color>-->
+    <color name="colorAccent">#74d3c1</color>
+    <!--<color name="colorAccent">#74d3c1</color>-->
+    <color name="message_text_color">#262626</color>
+    <color name="timestamp_color_mine">#3b7d8c</color>
+    <color name="timestamp_color_other">#909862</color>
+    <color name="textColor">#373637</color>
+    <color name="attchmentPreviewBg">#111111</color>
+    <color name="color_blue_color">#5b8ea5</color>
+    <color name="color_green_color">#74d3c1</color>
+
+    <!--login-color-->
+    <color name="login_text_color">#3a53a4</color>
+    <color name="login_hint_color">#808080</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="last_message_text_color">#999999</color>
+
+    <color name="mine_time_stamp_color">#797979</color>
+    <color name="chat_mine_text_color">#3e3e3e</color>
+    <color name="other_time_stamp_color">#99a7aa</color>
+    <color name="chat_other_text_color">#16191a</color>
+
+    <color name="client_name_text_color">#777777</color>
+
+    <color name="tab_select_color">#d1555b</color>
+    <color name="tab_unselect_text_color">#7b7c7c</color>
+    <color name="tab_unselect_color">#f4f8fe</color>
+
+    <color name="count_pink_color">#f86d6d</color>
+    <color name="count_blue_color">#6c6cee</color>
+
+    <color name="canned_text_color">#293a55</color>
+
+    <color name="canned_message_text_color">#7a7979</color>
+
+    <color name="colletaral_tab_active_color">#263754</color>
+    <color name="colletaral_tab_inactive_color">#a9a9a9</color>
+
+    <color name="user_info_name_color">#293b5a</color>
+
+    <color name="user_info_main_text_color">#636363</color>
+    <color name="user_info_data_text_color">#747474</color>
+
+    <!-- Color List-->
+    <color name="colorAppTheme">#3F51B5</color>
+    <color name="colorStatusBar">#303F9F</color>
+    <color name="colorText">#373637</color>
+    <color name="colorPinkText">#f86d6d</color>
+    <color name="colorBlueText">#6c6cee</color>
+    <color name="colorImageHolder">#e6eff5</color>
+    <color name="colorPrimaryRipple">#4200A995</color>
+    <color name="colorHint">#666666</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorRedFaded">#FF7979</color>
+    <color name="colorSelected">#3BDA70</color>
+    <color name="colorDisabled">#9E9E9E</color>
+
+    <!-- Dark Transparent-->
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorGradient">#B3000000</color>    <!--70%-->
+    <color name="colorBackgroundTransparent">#80000000</color>   <!--50%-->
+    <color name="colorGlassTransparent">#34000000</color>       <!--20%-->
+
+    <!-- Light Transparent-->
+    <color name="colorLightTransparent80">#CCFFFFFF</color>       <!--80%-->
+    <color name="colorLightTransparent">#B3FFFFFF</color>       <!--73%-->
+    <color name="colorLightBackgroundTransparent">#80FFFFFF</color>   <!--50%-->
+    <color name="colorLightGlassTransparent">#34FFFFFF</color>       <!--20%-->
+
+    <!--Dark Text Color-->
+    <color name="colorDarkPrimaryText">#000000</color>
+    <color name="colorDarkSecondaryText">#333333</color>
+    <color name="colorDarkDisabledText">#8D8D8D</color>
+    <color name="colorDarkDividersText">#F1F1F1</color>
+
+    <!--Light Text Color-->
+    <color name="colorLightPrimaryText">#FFFFFFFF</color>
+    <color name="colorLightSecondaryText">#B3FFFFFF</color>
+    <color name="colorLightDisabledText">#80FFFFFF</color>
+    <color name="colorLightDividersText">#1FFFFFFF</color>
+
+    <color name="colorGradientTop">#ebf9ff</color>
+    <color name="colorGradientCenter">#FFFFFF</color>
+    <color name="colorGradientBottom">#ebf9ff</color>
+
+    <color name="colorDarkButton">#8A000000</color>
+    <color name="colorLightButton">#B3FFFFFF</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#FE0E18</color>
+    <color name="colorOrange">#E39924</color>
+    <color name="colorYellow">#FBDB24</color>
+    <color name="colorLightGreen">#8AA929</color>
+    <color name="colorGreen">#57ae57</color>
+    <color name="colorGrey">#9E9E9E</color>
+    <color name="colorOn">#4cd964</color>
+    <color name="colorLigthGray">#F1F0F0</color>
+    <color name="colorOff">#9E9E9E</color>
+    <color name="colorBlue">#2196F3</color>
+    <color name="colorIndigo">#3F51B5</color>
+    <color name="colorBlueGrey">#607D8B</color>
+    <color name="activeChatEmailColor">#999999</color>
+    <color name="activeChatVisitCountColor">#757575</color>
+    <color name="agentOnlineColor">#a9a9a9</color>
+    <color name="activeChatUserNameColor">#5e5e5e</color>
+    <color name="archiveChatDateColor">#39b798</color>
+    <color name="archiveChatColor">#4e4e4e</color>
+    <color name="visitorNameColor">#616161</color>
+    <color name="agentNameColor">#727677</color>
+    <color name="activeChatUserLineColor">#e0e0e0</color>
+    <color name="archiveChatUserLineColor">#f4f4f4</color>
+    <color name="moreLayoutLineColor">#d5d5d5</color>
+    <color name="moreLineColor">#e2e2e2</color>
+    <color name="activeChatRedColor">#ee6b80</color>
+    <color name="activeChatBlueColor">#215d85</color>
+  <color name="colorLink">#3c36f0</color>
+
+    <color name="chat_box_left_color">#fbf5e2</color>
+    <color name="chat_box_right_color">#eaeaea</color>
+    <color name="receive_message_time_color">#737373</color>
+    <color name="send_message_time_color">#737373</color>
+    <color name="message_date_color">#e93f7f</color>
+    <color name="message_dateline_color">#bbbbbb</color>
+    <color name="customer_info_bg_color">#f8f8f8</color>
+    <color name="customer_info_name_color">#6c6c6c</color>
+    <color name="customer_info_title_color">#93acc6</color>
+    <color name="customer_info_color">#bbd292</color>
+    <color name="customer_info_description_color">#545454</color>
+    <color name="active_user_name_color">#d1555b</color>
+    <color name="back_action_bar_bg_color">#2b4063</color>
+    <color name="more_info_dialog_text_color">#3872ee</color>
+
+    <color name="comapny_name_color">#58718b</color>
+    <color name="single_chat_comapny_name_color">#394761</color>
+    <color name="site_name_color">#3e4e68</color>
+    <color name="archive_site_name_color">#213252</color>
+    <color name="archive_site_name_line_color">#38b694</color>
+    <color name="unread_count_text_color">#9ebe98</color>
+    <color name="unread_count_text_circle_color">#276383</color>
+    <color name="user_spineer_color">#232323</color>
+    <color name="agent_chat_count_color">#f4ba55</color>
+    <color name="inqueue_name_text_color">#555555</color>
+    <color name="mode_spiiner_bg_color">#a69172</color>
+    <color name="agent_search_bg_color">#efefef</color>
+    <color name="agentRowNameColor">#616161</color>
+    <color name="selectAgentNameColor">#6c6c6c</color>
+    <color name="cannedMessageColor">#757474</color>
+    <color name="messageTextColor">#484948</color>
+    <color name="typingMessageTextColor">#4c4c4c</color>
+    <color name="single_chat_inactive_color">#9eb2a9</color>
+    <color name="single_chat_active_color">#c46071</color>
+    <color name="single_chat_site_unread_count_color">#737373</color>
+    <color name="single_chat_site_view_color">#38b694</color>
+    <color name="single_chat_user_name_color">#454545</color>
+    <color name="single_chat_inactive_count_color">#bbd292</color>
+    <color name="single_chat_count_color">#bbd292</color>
+    <color name="single_chat_user_list_bg_color">#f5f5f5</color>
+    <color name="single_chat_agent_name_color">#5c758f</color>
+    <color name="transfer_color">#f6916e</color>
+    <color name="screenshot_color">#577169</color>
+    <color name="more_option_text_color">#666666</color>
+    <color name="collateral_color">#577169</color>
+    <color name="info_color">#444444</color>
+    <color name="canned_msg_color">#43b6e4</color>
+    <color name="chat_color">#83d081</color>
+    <color name="link_color">#83d081</color>
+    <color name="request_color">#b7ad63</color>
+    <color name="itemClickedColor">#f5f5f5</color>
+    <color name="menuItemColor">#4e4e4e</color>
+    <color name="menuProfileNameColor">#333f53</color>
+    <color name="menuRoleNameColor">#817f80</color>
+    <color name="tabActiveColor">#11b695</color>
+    <color name="tabInActiveColor">#444444</color>
+    <color name="profileBlueColor">#163c6f</color>
+    <color name="profileCountColor">#525050</color>
+    <color name="profileHintColor">#cdcdcd</color>
+    <color name="actionBarBlue">#2e4266</color>
+    <color name="filterTextColor">#555555</color>
+    <color name="filterClearColor">#394a6d</color>
+    <color name="filterValueColor">#41577d</color>
+    <color name="agentCountColor">#f25968</color>
+    <color name="userEndedChatColor">#f25968</color>
+    <color name="agentRoleColor">#bfbebe</color>
+    <color name="filterButtonColor">#38b694</color>
+    <color name="linkTabActiveColor">#243553</color>
+    <color name="linkTabInActiveColor">#acacac</color>
+    <color name="collateralFileNameColor">#333333</color>
+    <color name="activeUserCountColor">#9ebe98</color>
+    <color name="chat_ended_date_color">#0c0c0c</color>
+    <color name="contactNameColor">#c76b7b</color>
+    <color name="CustometIdTitleColor">#7b7b7b</color>
+    <color name="CustometIdColor">#505050</color>
+    <color name="ContactNumberColor">#030302</color>
+    <color name="ratingBarInactiveColor">#999999</color>
+    <color name="ratingBarActiveColor">#f8c735</color>
+    <color name="feedbackEndChatColor">#213252</color>
+    <color name="feedbackCategoriesColor">#090909</color>
+    <color name="feedbackNaColor">#676767</color>
+    <color name="feedbackLineColor">#ebebeb</color>
+    <color name="archiveAgentInActiveTextColor">#90aac5</color>
+    <color name="archiveAgentActiveTextColor">#ffffff</color>
+    <color name="archiveAgentListBgColor">#f4f3e8</color>
+    <color name="categoryNameColor">#666666</color>
+    <color name="archiveRowTimeColor">#6c6c6c</color>
+    <color name="archiveRowTagNameColor">#919194</color>
+    <color name="visitHistoryPageNameColor">#159CC3</color>
+    <color name="visitHistoryGreyColor">#767676</color>
+    <color name="visitHistoryLineColor">#f0f1f1</color>
+    <color name="agentsCountColor">#5d5e5e</color>
+    <color name="replyMessageColor">#666666</color>
+    <color name="transparent">#00000000</color>
+    <color name="bgShadowColor">#e5e5e5</color>
+    <color name="siteNameActiveBgColor">#90aac5</color>
+    <color name="statusMenuTextColor">#363636</color>
+    <color name="statusMenuLineColor">#d9d9d9</color>
+    <color name="onlineViewColor">#bbd292</color>
+    <color name="offlineViewColor">#f9be91</color>
+    <color name="feedbackCancelColor">#dddddd</color>
+
+</resources>

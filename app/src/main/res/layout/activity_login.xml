@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+ <!--   <LinearLayout
+        android:id="@+id/main_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/img_background_sign_in"
+            >
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="@dimen/login_screen_logo_width"
+                android:layout_height="@dimen/imageview_w_h"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/login_logo_top_margin"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/click2magiclogo" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/medium_margin"
+                android:text="@string/welcome_back"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/large_text"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/chatbox_height"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@drawable/login_oval_edittext_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/defultSpacing"
+                    android:contentDescription="@string/image"
+                    android:padding="@dimen/padding_14dp"
+                    app:srcCompat="@drawable/ic_user" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/email_edit_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/defultSpacing"
+                    android:background="@null"
+                    android:hint="@string/username_email"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:text=""
+                    android:textColor="@color/login_text_color"
+                    android:textColorHint="@color/login_hint_color"
+                    android:textSize="@dimen/small_text" />
+            </LinearLayout>
+            &lt;!&ndash;  android:text="vinod.kodavath@tvisha.in"
+              android:text="humera.t@tvisha.in"
+              android:text="kranthi.kumar@tvisha.in
+  "
+              &ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/chatbox_height"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/view_margin_small"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@drawable/login_oval_edittext_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/defultSpacing"
+                    android:contentDescription="@string/image"
+                    android:padding="@dimen/padding_14dp"
+                    app:srcCompat="@drawable/ic_lock_icon" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/password_edit_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/defultSpacing"
+                    android:background="@null"
+                    android:hint="@string/password"
+                    android:inputType="textWebPassword"
+                    android:text=""
+                    android:textColor="@color/login_text_color"
+                    android:textColorHint="@color/login_hint_color"
+                    android:textSize="@dimen/small_text" />
+
+            </LinearLayout>
+            &lt;!&ndash;  android:text="123456"
+            android:text="humera.t85"
+
+            android:text="cVfPqO"
+
+             &ndash;&gt;
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@drawable/login_button_background"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_text" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/main_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3.2">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:layout_weight="1.2">
+
+            <ImageView
+                android:id="@+id/image_view_temp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_background_sign_in" />
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="@dimen/login_screen_logo_width"
+                android:layout_height="@dimen/imageview_w_h"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/login_logo_top_margin"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                />
+
+            <!--android:src="@drawable/click2magiclogo"-->
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/medium_margin"
+                android:text="@string/welcome_back"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/large_text"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/chatbox_height"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@drawable/login_oval_edittext_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/defultSpacing"
+                    android:contentDescription="@string/image"
+                    android:padding="@dimen/padding_14dp"
+                    app:srcCompat="@drawable/ic_user" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/email_edit_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/defultSpacing"
+                    android:background="@null"
+                    android:hint="@string/username_email"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:text=""
+                    android:textColor="@color/login_text_color"
+                    android:textColorHint="@color/login_hint_color"
+                    android:textSize="@dimen/small_text" />
+            </LinearLayout>
+            <!--  android:text="vinod.kodavath@tvisha.in"
+              android:text="humera.t@tvisha.in"
+              android:text="kranthi.kumar@tvisha.in
+  "
+              -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/chatbox_height"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/view_margin_small"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@drawable/login_oval_edittext_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/defultSpacing"
+                    android:contentDescription="@string/image"
+                    android:padding="@dimen/padding_14dp"
+                    app:srcCompat="@drawable/ic_lock_icon" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/password_edit_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/defultSpacing"
+                    android:background="@null"
+                    android:hint="@string/password"
+                    android:inputType="textWebPassword"
+                    android:text=""
+                    android:textColor="@color/login_text_color"
+                    android:textColorHint="@color/login_hint_color"
+                    android:textSize="@dimen/small_text" />
+
+            </LinearLayout>
+            <!--  android:text="123456"
+            android:text="humera.t85"
+
+            android:text="cVfPqO"
+
+             -->
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.tvisha.click2magic.Helper.progressButton.ProgressButton
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@drawable/login_button_background"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_text" />
+   <!--         <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="@drawable/login_button_background"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_text" />-->
+        </FrameLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

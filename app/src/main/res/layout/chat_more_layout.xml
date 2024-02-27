@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_white_rectangle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/chatInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+
+            <ImageView
+                android:id="@+id/info_icon"
+                android:layout_width="@dimen/more_info_icon_size"
+                android:layout_height="@dimen/more_info_icon_size"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/close_icon"
+                app:srcCompat="@drawable/ic_small_info" />
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="Chat Info"
+                android:textColor="@color/more_info_dialog_text_color"
+                android:textSize="@dimen/normal_text" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/customer_info_description_color" />
+
+        <LinearLayout
+            android:id="@+id/endChatLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+
+            <ImageView
+                android:id="@+id/close_icon"
+                android:layout_width="@dimen/more_info_icon_size"
+                android:layout_height="@dimen/more_info_icon_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_small_close" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="End Chat"
+                android:textColor="@color/more_info_dialog_text_color"
+                android:textSize="@dimen/normal_text" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cancelInfoDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_white_rectangle">
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Cancel"
+            android:textColor="@color/more_info_dialog_text_color"
+            android:textSize="@dimen/normal_text" />
+
+    </LinearLayout>
+
+</LinearLayout>

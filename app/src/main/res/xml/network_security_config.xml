@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+       <!-- <domain includeSubdomains="true">localhost</domain>-->
+        <domain includeSubdomains="true">http://192.168.2.66</domain>
+        <domain includeSubdomains="true">http://192.168.2.66:8080</domain>
+        <domain includeSubdomains="true">http://192.168.2.66/c2m/public/api/user/</domain>
+        <domain includeSubdomains="true">testing.click2magic.com</domain>
+        <domain includeSubdomains="true">https://www.click2magic.com</domain>
+        <domain includeSubdomains="true">https://click2magic.com</domain>
+        <domain includeSubdomains="true">https://click2magic.com:8080</domain>
+        <domain includeSubdomains="true">https://apis.troopmessenger.com/api/messenger/</domain>
+        <domain includeSubdomains="true">https://apis.troopmessenger.com</domain>
+        <domain includeSubdomains="true">https://www.click2magic.com/api/user/</domain>
+    </domain-config>
+</network-security-config>

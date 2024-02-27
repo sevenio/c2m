@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="6dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/defultSpacing"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/main_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/archive_agent_inactive_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/supportImage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_support"/>
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:id="@+id/customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:clickable="false"
+                android:gravity="bottom"
+                android:paddingLeft="@dimen/defultSpacing"
+                android:paddingRight="@dimen/defultSpacing"
+                android:text="upendra"
+                android:textAllCaps="true"
+                android:textColor="@color/archiveAgentInActiveTextColor"
+                android:textSize="@dimen/small_text" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

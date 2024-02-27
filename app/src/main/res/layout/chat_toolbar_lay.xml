@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+
+    >
+
+   <!-- android:background="?attr/selectableItemBackgroundBorderless"
+-->
+    <LinearLayout
+        android:id="@+id/back_lay"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bottom_shadow_view"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/defultSpacing">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_14dp"
+            app:srcCompat="@drawable/menu_new" />
+
+        <ImageView
+            android:id="@+id/nav_icon"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_14dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/menu_new" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/companyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/bottom_shadow_view"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/actionLable"
+            android:layout_width="150dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:singleLine="true"
+            android:src="@drawable/logoo" />
+
+
+        <!-- <RelativeLayout
+             android:id="@+id/userSpinnerLayout"
+             android:layout_width="150dp"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_alignParentRight="true"
+             android:padding="@dimen/padding_14dp"
+             android:gravity="center_vertical"
+             android:visibility="visible"
+
+
+
+             >
+
+
+             <Spinner
+                 android:id="@+id/userSpinner"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:spinnerMode="dropdown"
+                 android:clickable="true"
+                 android:scrollbars="none"
+                 android:overlapAnchor="false"
+                 android:layout_centerVertical="true"
+                 android:dropDownSelector="@color/activeChatUserLineColor"
+                 android:background="@android:color/transparent"
+                 android:popupBackground="@android:color/white"
+                 app:backgroundTint="@android:color/transparent"
+
+                 >
+
+             </Spinner>
+
+
+
+             &lt;!&ndash; android:dropDownVerticalOffset="20dp"&ndash;&gt;
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:gravity="end"
+                 android:layout_centerVertical="true"
+                 android:visibility="visible"
+                 android:layout_gravity="center">
+
+
+                 <ImageView
+                     android:layout_width="@dimen/bottom_arrow_image_size"
+                     android:layout_height="@dimen/bottom_arrow_image_size"
+                     android:layout_gravity="center"
+                     android:gravity="center_vertical"
+                     android:layout_marginRight="5dp"
+                     app:srcCompat="@drawable/angle_arrow_down" />
+
+             </LinearLayout>
+
+         </RelativeLayout>-->
+
+
+        <LinearLayout
+            android:id="@+id/userSpinnerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_14dp"
+            android:visibility="gone">
+
+
+            <Spinner
+                android:id="@+id/userSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:dropDownSelector="@color/activeChatUserLineColor"
+                android:gravity="center_vertical"
+                android:overlapAnchor="false"
+                android:popupBackground="@android:color/white"
+                android:scrollbars="none"
+                android:spinnerMode="dropdown"
+                app:backgroundTint="@android:color/transparent">
+
+            </Spinner>
+
+
+            <FrameLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/bottom_arrow_image_size"
+                    android:layout_height="@dimen/bottom_arrow_image_size"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/angle_arrow_down" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

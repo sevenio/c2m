@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+           <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/profileBlueColor">
+
+                <LinearLayout
+                    android:id="@+id/logout_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/large_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/logout_image_size"
+                        android:layout_height="@dimen/logout_image_size"
+                        app:srcCompat="@drawable/logout" />
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Logout "
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/profileBlueColor">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginLeft="@dimen/very_large_margin"
+                android:layout_marginTop="-180dp"
+                android:layout_marginRight="@dimen/very_large_margin"
+                android:background="@drawable/profile_shadow_view">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="6dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                     />
+
+                <com.theartofdev.fastimageloader.target.TargetImageView
+                    android:id="@+id/profileImage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/profile"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="6dp"
+
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/editLayout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-25dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pencil" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/large_margin"
+                android:orientation="vertical">
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                    android:id="@+id/profiler_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/menuProfileNameColor"
+                    android:textSize="@dimen/small_text"
+                    tools:text="Akhil Malyala" />
+
+                <TextView
+                    android:id="@+id/profiler_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textSize="@dimen/very_small_text"
+                    android:textStyle="italic"
+                    tools:text="Agent" />
+
+                <TextView
+                    android:id="@+id/display_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/view_margin_small"
+                    android:gravity="start"
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textSize="@dimen/very_small_text"
+                    android:textStyle="italic"
+                    android:visibility="gone"
+                    tools:text="Display Name" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/activeChatUserLineColor"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3.8">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:background="#f7f7f7"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/very_small_margin"
+                        android:gravity="center_horizontal"
+                        android:text="Chat Limit"
+                        android:textColor="#383838"
+                        android:textSize="@dimen/small_text" />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:background="@drawable/chat_limit_count_oval_bg">
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:id="@+id/chat_limit_count_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/profileCountColor"
+                            android:textSize="@dimen/small_text" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/very_small_margin"
+                        android:gravity="center_horizontal"
+                        android:text="Chats"
+                        android:textColor="@color/menuRoleNameColor"
+                        android:textSize="@dimen/small_text" />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:background="@drawable/chats_count_oval_bg">
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:id="@+id/chats_count_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/profileCountColor"
+                            android:textSize="@dimen/small_text" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/small_margin"
+                        app:srcCompat="@drawable/double_angle_pointing_to_right" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/very_small_margin"
+                        android:gravity="center_horizontal"
+                        android:text="Good"
+                        android:textColor="#5fc850"
+                        android:textSize="@dimen/small_text" />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:background="@drawable/good_count_background">
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:id="@+id/good_count_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/profileCountColor"
+                            android:textSize="@dimen/small_text" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/very_small_margin"
+                        android:gravity="center_horizontal"
+                        android:text="Bad"
+                        android:textColor="#f79585"
+                        android:textSize="@dimen/small_text" />
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:background="@drawable/bad_count_background">
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:id="@+id/bad_count_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/profileCountColor"
+                            android:textSize="@dimen/small_text" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/activeChatUserLineColor"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:layout_marginRight="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/medium_margin"
+                android:orientation="vertical">
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Display Name"
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textSize="@dimen/medium_text" />
+
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/display_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:background="@drawable/change_password_bg"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="Display Name"
+                    android:inputType="textNoSuggestions|text"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingTop="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:paddingBottom="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textColorHint="@color/profileHintColor"
+                    android:textSize="@dimen/small_text" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:layout_marginRight="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/medium_margin"
+                android:orientation="vertical">
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Change Password"
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textSize="@dimen/medium_text" />
+
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/old_password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:background="@drawable/change_password_bg"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="Current password"
+                    android:inputType="textNoSuggestions|textPassword"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingTop="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:paddingBottom="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textColorHint="@color/profileHintColor"
+                    android:textSize="@dimen/small_text" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:background="@drawable/change_password_bg"
+                    android:focusableInTouchMode="true"
+                    android:hint="New password"
+                    android:inputType="textNoSuggestions|textPassword"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingTop="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:paddingBottom="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textColorHint="@color/profileHintColor"
+                    android:textSize="@dimen/small_text" />
+
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                    android:id="@+id/confirm_password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:background="@drawable/change_password_bg"
+                    android:focusableInTouchMode="true"
+                    android:hint="Confirm password"
+                    android:inputType="textNoSuggestions|textPassword"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingTop="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:paddingBottom="@dimen/small_padding"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/menuRoleNameColor"
+                    android:textColorHint="@color/profileHintColor"
+                    android:textSize="@dimen/small_text" />
+
+                <com.tvisha.click2magic.Helper.progressButton.ProgressButton
+                    android:id="@+id/actionSave"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:background="@drawable/rounded_blue_rectangle"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

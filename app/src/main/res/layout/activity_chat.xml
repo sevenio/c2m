@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activityRoot">
+
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <!--  android:background="@drawable/chat_bg"-->
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <include layout="@layout/chat_toolbar_lay" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="0dp"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:id="@+id/main_rl_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <RelativeLayout
+                    android:id="@+id/usersLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/agentNameLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_support"/>
+
+                            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                                android:id="@+id/agent_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/single_chat_agent_name_color"
+                                android:textSize="@dimen/very_small_text"
+                              />
+
+                        </LinearLayout>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/topRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/agent_name_tv"
+                        android:minHeight="40dp"
+                        android:visibility="visible" />
+
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="@dimen/progress_h_w"
+                    android:layout_height="@dimen/progress_h_w"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="invisible"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/usersLayout"
+                    android:theme="@style/CircularProgress" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chatRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottomLayout"
+                    android:layout_below="@+id/usersLayout"
+                    android:layout_marginLeft="@dimen/defultSpacing"
+                    android:layout_marginRight="@dimen/defultSpacing"
+                    android:padding="@dimen/defultSpacing" />
+
+                <RelativeLayout
+                    android:id="@+id/info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/usersLayout"
+                    android:visibility="gone">
+
+                    <include layout="@layout/customer_info_layout" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/contact_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/usersLayout"
+                    android:visibility="gone">
+
+                    <include layout="@layout/contact_layout" />
+
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/bottomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/defultSpacing"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/reply_message_layout"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:paddingLeft="@dimen/defultSpacing"
+                        android:paddingRight="@dimen/defultSpacing"
+                        android:layout_height="wrap_content">
+
+                        <include layout="@layout/reply_message_layout" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/moreLayoutLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/moreLayoutLineColor"
+                        android:visibility="gone" />
+
+                  <!--  <RelativeLayout
+                        android:id="@+id/moreActionsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/bottom_lay_card"
+                        android:layout_marginTop="@dimen/defultSpacing"
+                        android:visibility="gone">
+
+
+                        <include layout="@layout/more_options_new_layout" />
+
+
+                    </RelativeLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/userEndedChatLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@drawable/user_ended_chat_bg">
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/ContactNumberColor"
+                        android:textSize="@dimen/small_text"
+                        android:padding="10dp"
+                        android:text="User Ended Chat"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/smartRepliesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/smartRepliesRecyclerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="40dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bottom_lay_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/chatbox_height"
+                        android:background="@color/colorWhite"
+                        android:paddingLeft="@dimen/defultSpacing"
+                        android:paddingRight="@dimen/defultSpacing"
+                        android:paddingBottom="@dimen/defultSpacing">
+
+
+                        <include layout="@layout/chat_box_layout" />
+
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/loadingSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="@dimen/progress_h_w"
+                        android:layout_height="@dimen/progress_h_w"
+                        android:layout_above="@+id/noData"
+                        android:theme="@style/CircularProgress" />
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                        android:id="@+id/noData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/noDataLogo"
+                        android:gravity="center"
+                        android:text="@string/loading" />
+
+                </LinearLayout>
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                    android:id="@+id/sticky_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/defultSpacing"
+                    android:background="@drawable/ic_header_background"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/defultSpacing"
+                    android:paddingRight="@dimen/activity_vertical_margin"
+                    android:paddingBottom="@dimen/defultSpacing"
+                    android:text="Today"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/topview_progressbar"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    android:layout_below="@+id/sticky_header"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/scrolldown_viewer"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignBottom="@+id/chat_list_recycler"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:transitionName="enter"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/scrollDown"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_margin="@dimen/defultSpacing"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_scroll_down" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                    android:id="@+id/unreadMesgCount"
+                    android:layout_width="@dimen/count_icon_size"
+                    android:layout_height="@dimen/count_icon_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/defultSpacing"
+                    android:layout_marginRight="@dimen/defultSpacing"
+                    android:background="@drawable/blue_circle_background"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/progress_viwer"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignBottom="@+id/chat_list_recycler"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:transitionName="enter"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ContentLoadingProgressBar"
+                    android:layout_width="@dimen/progress_h_w"
+                    android:layout_height="@dimen/progress_h_w"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/noDataImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/no_visitors"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@+id/noDataImage"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="0dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/attachmentViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_bg"
+        android:visibility="gone">
+
+
+        <FrameLayout
+            android:id="@+id/closeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/attachment_close_icon"
+                android:layout_width="@dimen/cancel_image_size"
+                android:layout_height="@dimen/cancel_image_size"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/ic_small_close" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cannedMessagesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chatbox_height"
+        android:layout_marginLeft="@dimen/defultSpacing"
+        android:layout_marginRight="@dimen/defultSpacing"
+        android:layout_marginBottom="@dimen/defultSpacing"
+        android:visibility="gone">
+
+        <include layout="@layout/canned_messages_layout" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

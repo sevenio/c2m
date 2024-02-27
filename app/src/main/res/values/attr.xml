@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressButton">
+        <attr name="loadingDrawable" format="reference"/>
+        <attr name="loadingText" format="reference|string"/>
+        <attr name="selectedText" format="reference|string"/>
+        <attr name="unselectedText" format="reference|string"/>
+        <attr name="loading" format="reference|boolean"/>
+        <attr name="autoDisableClickable" format="reference|boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+</resources>

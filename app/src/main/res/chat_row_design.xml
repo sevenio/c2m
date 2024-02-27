@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/very_small_margin"
+    android:orientation="vertical"
+  >
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_weight="3">
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/message_dateline_color"/>
+
+        <ae.taxishare.user.customViews.AvenirLTStdBlackTextView
+            android:id="@+id/date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/message_date_color"
+            android:textSize="@dimen/small_text"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="visible"
+            android:text="Today"/>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/message_dateline_color"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/sendMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/chat_box_margin"
+        android:background="@drawable/chat_right_custom"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:orientation="vertical">
+
+
+
+        <ae.taxishare.user.customViews.AvenirLTStdRomanTextView
+            android:id="@+id/send_message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/small_text"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingBottom="@dimen/very_small_padding"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ae.taxishare.user.customViews.AvenirLTStdRomanTextView
+                android:id="@+id/send_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:00AM"
+                android:textColor="@color/send_message_time_color"
+                android:paddingLeft="@dimen/very_small_padding"
+                android:paddingRight="@dimen/very_small_padding"
+                android:textSize="@dimen/micro_text"
+                />
+
+            <ImageView
+                android:id="@+id/sendStatusImage"
+                android:layout_width="@dimen/chat_status_image"
+                android:layout_height="@dimen/chat_status_image"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/very_small_padding"
+                android:layout_marginBottom="@dimen/very_small_padding"
+                android:src="@drawable/sent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/receiveMessageLayout"
+        android:layout_below="@id/dateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/chat_box_margin"
+        android:layout_marginLeft="0dp"
+        android:visibility="gone"
+        android:background="@drawable/chat_left_custom"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+
+
+
+        <ae.taxishare.user.customViews.AvenirLTStdRomanTextView
+            android:id="@+id/receive_message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/small_text"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingBottom="@dimen/very_small_padding"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ae.taxishare.user.customViews.AvenirLTStdRomanTextView
+                android:id="@+id/receive_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:00AM"
+                android:textColor="@color/receive_message_time_color"
+                android:paddingLeft="@dimen/very_small_padding"
+                android:paddingRight="@dimen/very_small_padding"
+                android:paddingBottom="@dimen/very_small_padding"
+                android:textSize="@dimen/micro_text"
+                />
+
+            <ImageView
+                android:id="@+id/receiveStatusImage"
+                android:layout_width="@dimen/chat_status_image"
+                android:layout_height="@dimen/chat_status_image"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/very_small_padding"
+                android:layout_marginBottom="@dimen/very_small_padding"
+                android:src="@drawable/sent"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

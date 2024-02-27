@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/attchmentPreviewBg"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false">
+
+
+        <com.tvisha.click2magic.CustomFontViews.NestedWebView
+            android:id="@+id/docView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionBar"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionBar"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ImageView
+            android:id="@+id/ContentLoadingProgressBar"
+            android:layout_width="@dimen/progress_h_w"
+            android:layout_height="@dimen/progress_h_w"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/actionBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark">
+
+            <include layout="@layout/common_back_actionbar" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

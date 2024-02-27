@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/back_lay"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/defultSpacing"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_14dp"
+            app:srcCompat="@drawable/menu_new" />
+
+        <ImageView
+            android:id="@+id/nav_icon"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_14dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/menu_new" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/companyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/actionLable"
+            android:layout_width="150dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/left_transparent_view"
+            android:singleLine="true"
+            android:src="@drawable/logoo" />
+
+        <LinearLayout
+            android:id="@+id/userSpinnerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_14dp"
+            android:visibility="gone">
+
+
+            <Spinner
+                android:id="@+id/userSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:dropDownSelector="@color/activeChatUserLineColor"
+                android:gravity="center_vertical"
+                android:overlapAnchor="false"
+                android:popupBackground="@android:color/white"
+                android:scrollbars="none"
+                android:spinnerMode="dropdown"
+                app:backgroundTint="@android:color/transparent">
+
+            </Spinner>
+
+
+            <FrameLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/bottom_arrow_image_size"
+                    android:layout_height="@dimen/bottom_arrow_image_size"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/angle_arrow_down" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/defultSpacing"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/actionFilter"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_14dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/filter" />
+
+            <ImageView
+                android:id="@+id/offlineImage"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_switch_off" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

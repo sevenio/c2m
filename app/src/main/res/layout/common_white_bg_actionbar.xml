@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/back_lay"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/defultSpacing">
+
+        <ImageView
+            android:id="@+id/actionBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_14dp"
+            app:srcCompat="@drawable/blue_back_arrow" />
+
+        <ImageView
+            android:id="@+id/nav_icon"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_14dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_menu" />
+    </LinearLayout>
+
+    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+        android:id="@+id/actionLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/actionBarBlue"
+        android:textSize="@dimen/medium_text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/info_icon"
+            android:layout_width="?actionBarSize"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_10"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_small_info" />
+
+        <ImageView
+            android:id="@+id/actionShare"
+            android:layout_width="?actionBarSize"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_10"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_close" />
+
+        <ImageView
+            android:id="@+id/actionClose"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/large_padding"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_cancel_agents" />
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+            android:id="@+id/actionClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_14dp"
+            android:singleLine="true"
+            android:text="CLEAR"
+            android:textColor="@color/filterClearColor"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

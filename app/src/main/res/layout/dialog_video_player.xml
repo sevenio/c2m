@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/attchmentPreviewBg">
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/actionBack"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/actionShare"
+            android:layout_toLeftOf="@+id/actionShare"
+            android:layout_toEndOf="@+id/actionBack"
+            android:layout_toRightOf="@+id/actionBack"
+            android:gravity="center_vertical"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/small_text" />
+
+        <ImageButton
+            android:id="@+id/actionShare"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_share" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBar"
+        android:background="@android:color/transparent">
+
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+</RelativeLayout>
+

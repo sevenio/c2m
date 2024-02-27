@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.HomeActivity">
+
+
+    <LinearLayout
+        android:id="@+id/toolLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/settingsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:visibility="gone"
+        android:background="@color/profileBlueColor">
+
+        <LinearLayout
+            android:id="@+id/logout_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/large_margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/logout_image_size"
+                android:layout_height="@dimen/logout_image_size"
+                app:srcCompat="@drawable/logout" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Logout "
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_shadow_view">
+
+        <include layout="@layout/main_toolbar_lay" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/backtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/bottom_shadow_view">
+
+        <include layout="@layout/other_agent_toolbar" />
+    </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navigation_lay"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/home_line_bg"/>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:tabGravity="fill"
+            app:tabIndicatorGravity="top"
+            app:tabTextColor="@color/tab_color_state"
+            app:tabTextAppearance="@style/AppTabTextAppearance"
+            app:tabIconTint="@color/tab_color_state"
+            app:tabIndicatorHeight="0dp"
+            app:tabIndicatorAnimationDuration="1"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed" />
+
+    </LinearLayout>
+
+    <com.tvisha.click2magic.Helper.CustomViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation_lay"
+        android:layout_below="@+id/toolLay"
+        android:background="@color/colorWhite"
+        tools:layout_editor_absoluteX="8dp" />
+
+ <!--   <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation_lay"
+        android:layout_below="@+id/toolLay"
+        android:background="@color/colorWhite"
+        tools:layout_editor_absoluteX="8dp" />-->
+
+    <!---->
+
+
+</RelativeLayout>

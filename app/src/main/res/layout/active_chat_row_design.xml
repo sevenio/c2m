@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:id="@+id/email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="chat@mail.com"
+                android:textColor="@color/activeChatEmailColor"
+                android:textSize="@dimen/normal_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                    android:id="@+id/visit_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/visit_count_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="1st visit"
+                    android:textColor="@color/activeChatVisitCountColor"
+                    android:textSize="@dimen/small_text" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                    android:id="@+id/user_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Mounika"
+                    android:textColor="@color/activeChatUserNameColor"
+                    android:textSize="@dimen/normal_text" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/unread_rl_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                    android:id="@+id/unread_count_tv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/circle_shadow_view"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/active_user_name_color"
+                    android:textSize="@dimen/micro_text" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/activeChatUserLineColor" />
+
+
+</LinearLayout>

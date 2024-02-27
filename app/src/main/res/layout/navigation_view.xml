@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/small_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/view_margin_small"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <com.tvisha.click2magic.Helper.RoundishImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="@dimen/height_avatar_56"
+                android:layout_height="@dimen/height_avatar_56"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/visitor_inactive__180_x_180" />
+
+
+            <!-- <com.tvisha.click2magic.Helper.RoundishImageView
+                 android:id="@+id/profile_pic"
+                 android:layout_width="@dimen/height_avatar_56"
+                 android:layout_height="@dimen/height_avatar_56"
+                 android:adjustViewBounds="true"
+                 android:scaleType="fitXY"
+                 app:cornerRadius="20dp"
+                 app:roundedCorners="all"
+                 app:srcCompat="@drawable/default_profile" />-->
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                android:id="@+id/profiler_Name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="start"
+                android:textColor="@color/menuProfileNameColor"
+                android:textSize="@dimen/normal_text"
+                tools:text="Akhil Malyala" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:id="@+id/profiler_designation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_margin_small"
+                android:gravity="start"
+                android:textColor="@color/menuRoleNameColor"
+                android:textSize="@dimen/normal_text"
+                tools:text="Agent" />
+
+        </LinearLayout>
+
+
+        <include layout="@layout/divider_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/image_height_width"
+                android:layout_height="@dimen/image_height_width"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/profile"
+                android:padding="@dimen/view_padding_small"
+                android:src="@drawable/profile_pic" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/view_margin_small"
+                android:text="@string/profile"
+                android:textColor="#444444"
+                android:textSize="@dimen/medium_text" />
+        </LinearLayout>
+
+        <!-- <include layout="@layout/divider_horizontal" />-->
+
+        <LinearLayout
+            android:id="@+id/notification_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/image_height_width"
+                android:layout_height="@dimen/image_height_width"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/notification"
+                android:padding="@dimen/view_padding_small"
+                android:src="@drawable/notifications_pic" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/view_padding_small"
+                android:text="@string/notification"
+                android:textColor="#444444"
+                android:textSize="@dimen/medium_text" />
+        </LinearLayout>
+
+        <!--   <include layout="@layout/divider_horizontal" />-->
+
+
+        <LinearLayout
+            android:id="@+id/archieves_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/image_height_width"
+                android:layout_height="@dimen/image_height_width"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/notification"
+                app:srcCompat="@drawable/archive" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/view_padding_small"
+                android:text="@string/archive"
+                android:textColor="@color/menuItemColor"
+                android:textSize="@dimen/normal_text" />
+        </LinearLayout>
+
+        <include layout="@layout/divider_horizontal" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/divider_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/logout_layout"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginRight="@dimen/small_padding" />
+
+    <LinearLayout
+        android:id="@+id/logout_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/image_height_width"
+            android:layout_height="@dimen/image_height_width"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/logout"
+            app:srcCompat="@drawable/ic_logout" />
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" Logout"
+            android:textColor="#58aff4"
+            android:textSize="@dimen/medium_text" />
+    </LinearLayout>
+
+</RelativeLayout>

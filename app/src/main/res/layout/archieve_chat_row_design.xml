@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/chat_message_selected_bg"
+    android:orientation="vertical">
+
+    <!--  android:background="?android:attr/selectableItemBackground"-->
+
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/calender_icon_size"
+            android:layout_height="@dimen/calender_icon_size"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            app:srcCompat="@drawable/small_calendar" />
+
+
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+            android:id="@+id/today_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Today- "
+            android:textColor="@color/archiveChatDateColor"
+            android:textSize="@dimen/small_text"
+            android:textAllCaps="true"
+            android:visibility="gone" />
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_vertical"
+            android:text="Date"
+            android:textAllCaps="true"
+            android:textColor="@color/archiveChatDateColor"
+            android:textSize="@dimen/small_text" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:id="@+id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Mounika"
+                        android:textColor="@color/archiveChatColor"
+                        android:textSize="@dimen/normal_text" />
+
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                        android:id="@+id/chat_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="14:58"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/archiveRowTimeColor"
+                        android:textSize="@dimen/very_small_text" />
+                </LinearLayout>
+
+
+               <!-- <HorizontalScrollView
+                    android:id="@+id/tagLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_grey_bg"
+                    android:visibility="visible"
+                    android:scrollbars="none">
+
+                    &lt;!&ndash;   android:background="@drawable/tag_grey_bg"&ndash;&gt;
+
+
+                    <LinearLayout
+                        android:id="@+id/tagLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:gravity="center">
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                            android:id="@+id/tag_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingRight="13dp"
+                            android:paddingLeft="13dp"
+                            android:singleLine="true"
+                            android:text="NA"
+                            android:textColor="@color/archiveRowTagNameColor"
+                            android:textSize="@dimen/very_small_text" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>-->
+
+
+
+                    <!--   android:background="@drawable/tag_grey_bg"-->
+
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                            android:id="@+id/tag_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingRight="13dp"
+                            android:paddingLeft="13dp"
+                            android:singleLine="true"
+                            android:text="NA"
+                            android:visibility="gone"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:background="@drawable/archive_tag_bg"
+                            android:textColor="@color/archiveRowTagNameColor"
+                            android:textSize="@dimen/very_small_text" />
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="Agent : "
+                            android:textColor="@color/activeChatUserNameColor"
+                            android:textSize="@dimen/small_text"
+                            android:visibility="gone" />
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                            android:id="@+id/agent_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="Vinod"
+                            android:textColor="@color/agentNameColor"
+                            android:textSize="@dimen/small_text"
+                            android:visibility="gone" />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+
+
+                    <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                        android:id="@+id/rating_feed_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/relavity_block"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        android:saveEnabled="false"
+                        app:srb_numberOfStars="5" />
+
+                    <ImageView
+                        android:id="@+id/na_image"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="right"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/block_chat" />
+
+                </LinearLayout>
+
+                <!--  <LinearLayout
+                    android:layout_width="@dimen/chat_circle_size"
+                    android:layout_height="@dimen/chat_circle_size"
+                    android:background="@drawable/chat_bg_oval"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/chat_icon_size"
+                        android:layout_height="@dimen/chat_icon_size"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/chat" />
+
+
+                </LinearLayout>-->
+
+                <!--
+
+                                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:background="@drawable/archiev_view_bg"
+                                    android:text="View"/>
+                -->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/archiveChatUserLineColor" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

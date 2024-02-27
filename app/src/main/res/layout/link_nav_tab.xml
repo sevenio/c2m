@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="1dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+        android:id="@+id/nav_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/black"
+        android:textColor="#333"
+        android:textSize="@dimen/normal_text"
+        tools:text="Courses" />
+
+</LinearLayout>
+

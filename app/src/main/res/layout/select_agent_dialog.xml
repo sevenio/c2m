@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="5dp">
+
+
+    <ImageView
+        android:id="@+id/cancelImage"
+        android:layout_width="@dimen/cancel_image_size"
+        android:layout_height="@dimen/cancel_image_size"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/very_small_margin"
+        app:srcCompat="@drawable/cancel_img" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cancelImage"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/agent_search_bg_rectangle"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Agent"
+                    android:textColor="#213252"
+                    android:textSize="@dimen/normal_text" />
+
+
+                <RelativeLayout
+                    android:id="@+id/searchPannel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_typelist"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_search_cancel"
+                        android:background="@drawable/agent_search_white_bg_rectangle"
+                        android:paddingLeft="8dp">
+
+                        <ImageView
+                            android:id="@+id/searchimage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_search_small_grey" />
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsEditText
+                            android:id="@+id/searchAgent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/defultSpacing"
+                            android:layout_toEndOf="@+id/searchimage"
+                            android:layout_toRightOf="@+id/searchimage"
+                            android:background="@null"
+                            android:hint="@string/search"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+                            android:padding="@dimen/defultSpacing"
+                            android:singleLine="true"
+                            android:textColor="@color/message_text_color"
+                            android:textColorHint="#d6d6d6"
+                            android:textSize="@dimen/small_text" />
+                    </RelativeLayout>
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                        android:id="@+id/tv_search_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="onClick"
+                        android:text="Cancel"
+                        android:textColor="#5f8ef2"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="2dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

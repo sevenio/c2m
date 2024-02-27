@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+
+    <RelativeLayout
+        android:id="@+id/chat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_shadow_view">
+
+            <include layout="@layout/chat_toolbar_lay" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/extra_info_view"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/toolbar">
+
+            <RelativeLayout
+                android:id="@+id/spinner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:layout_toLeftOf="@+id/info_icon"
+                android:background="@drawable/shadowview"
+                android:gravity="center_vertical">
+
+                <com.tvisha.click2magic.CustomFontViews.NDSpinner
+                    android:id="@+id/reuestdropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/dropdwn_view"
+                    android:background="@null"
+                    android:overlapAnchor="false" />
+
+                <ImageView
+                    android:id="@+id/dropdwn_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/defultSpacing"
+                    android:paddingRight="@dimen/defultSpacing"
+                    app:srcCompat="@drawable/down_arrow" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/info_icon"
+                android:layout_width="?actionBarSize"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/close_icon"
+                android:padding="@dimen/padding_10"
+                app:srcCompat="@drawable/ic_small_info" />
+
+            <ImageView
+                android:id="@+id/close_icon"
+                android:layout_width="?actionBarSize"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_10"
+                app:srcCompat="@drawable/ic_small_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/extra_info_view"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/main_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/chat_list_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/bottom_view"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                            android:id="@+id/swipe_refresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/chatRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/defultSpacing"
+                                android:layout_marginRight="@dimen/defultSpacing"
+                                android:layout_marginBottom="@dimen/defultSpacing"
+                                android:padding="@dimen/defultSpacing" />
+
+                        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                        <LinearLayout
+                            android:id="@+id/loadingSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                style="@style/Widget.AppCompat.ProgressBar"
+                                android:layout_width="@dimen/progress_h_w"
+                                android:layout_height="@dimen/progress_h_w"
+                                android:layout_above="@+id/noData"
+                                android:theme="@style/CircularProgress" />
+
+                            <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                android:id="@+id/noData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/noDataLogo"
+                                android:gravity="center"
+                                android:text="@string/loading" />
+
+                        </LinearLayout>
+
+                        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                            android:id="@+id/sticky_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/defultSpacing"
+                            android:background="@drawable/ic_header_background"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/activity_vertical_margin"
+                            android:paddingTop="@dimen/defultSpacing"
+                            android:paddingRight="@dimen/activity_vertical_margin"
+                            android:paddingBottom="@dimen/defultSpacing"
+                            android:text="Today"
+                            android:textColor="#333333"
+                            android:textSize="@dimen/medium_text"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/topview_progressbar"
+                            android:layout_width="@dimen/activity_vertical_margin"
+                            android:layout_height="@dimen/activity_vertical_margin"
+                            android:layout_below="@+id/sticky_header"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/scrolldown_viewer"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignBottom="@+id/chat_list_recycler"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:transitionName="enter"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/scrollDown"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_margin="@dimen/defultSpacing"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:srcCompat="@drawable/ic_scroll_down" />
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                        android:id="@+id/unreadMesgCount"
+                        android:layout_width="@dimen/count_icon_size"
+                        android:layout_height="@dimen/count_icon_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/defultSpacing"
+                        android:layout_marginRight="@dimen/defultSpacing"
+                        android:background="@drawable/blue_circle_background"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/medium_text"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/progress_viwer"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignBottom="@+id/chat_list_recycler"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:transitionName="enter"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ContentLoadingProgressBar"
+                        android:layout_width="@dimen/progress_h_w"
+                        android:layout_height="@dimen/progress_h_w"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/defultSpacing">
+
+                    <ImageView
+                        android:id="@+id/linear"
+                        android:layout_width="@dimen/image_icon_size"
+                        android:layout_height="@dimen/image_icon_size"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/circleshadow_view"
+                        app:srcCompat="@drawable/plus" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bottom_slide_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/bottom_view"
+                    android:layout_alignBottom="@+id/bottom_view"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/bottom_view"
+                    android:layout_toRightOf="@+id/bottom_view"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/defultSpacing">
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontal_scrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/defultSpacing"
+                        android:fillViewport="true"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/defultSpacing">
+
+                            <RelativeLayout
+                                android:id="@+id/chat_transfer_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/defultSpacing"
+                                android:layout_marginRight="@dimen/defultSpacing"
+                                android:background="@drawable/curved_shadow_view"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_vertical_margin"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/chat_tranfer_icon"
+                                    android:layout_width="@dimen/icon_25dp"
+                                    android:layout_height="@dimen/icon_25dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="2dp"
+                                    app:srcCompat="@drawable/transfer_chat" />
+
+                                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/chat_tranfer_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="  Transfer  "
+                                    android:textColor="@color/tab_select_color"
+                                    android:textSize="@dimen/small_text" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/chat_collateral_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/defultSpacing"
+                                android:layout_marginRight="@dimen/defultSpacing"
+                                android:background="@drawable/curved_shadow_view"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_vertical_margin"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/chat_collateral_icon"
+                                    android:layout_width="@dimen/icon_25dp"
+                                    android:layout_height="@dimen/icon_25dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="2dp"
+                                    app:srcCompat="@drawable/agent" />
+
+                                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/chat_collateral_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text=" Collateral "
+                                    android:textColor="#577069"
+                                    android:textSize="@dimen/small_text" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/chat_agent_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/defultSpacing"
+                                android:layout_marginRight="@dimen/defultSpacing"
+                                android:background="@drawable/curved_shadow_view"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_vertical_margin"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/chat_agent_icon"
+                                    android:layout_width="@dimen/icon_25dp"
+                                    android:layout_height="@dimen/icon_25dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="2dp"
+                                    app:srcCompat="@drawable/agent" />
+
+                                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/chat_agent_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="    Agents    "
+                                    android:textColor="#577069"
+                                    android:textSize="@dimen/small_text" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/chat_canned_message_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/defultSpacing"
+                                android:layout_marginRight="@dimen/defultSpacing"
+                                android:background="@drawable/curved_shadow_view"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_vertical_margin"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/chat_canned_icon"
+                                    android:layout_width="@dimen/icon_25dp"
+                                    android:layout_height="@dimen/icon_25dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="2dp"
+                                    app:srcCompat="@drawable/ic_canned_msgs" />
+
+                                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/chat_canned_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="@string/canned_msg"
+                                    android:textColor="#26B6E4"
+                                    android:textSize="@dimen/small_text" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/chat_linked_message_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/defultSpacing"
+                                android:layout_marginRight="@dimen/defultSpacing"
+                                android:background="@drawable/curved_shadow_view"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_vertical_margin"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/chat_link_icon"
+                                    android:layout_width="@dimen/icon_25dp"
+                                    android:layout_height="@dimen/icon_25dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="2dp"
+                                    app:srcCompat="@drawable/ic_worlwide" />
+
+                                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/chat_link_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="      Links      "
+                                    android:textColor="#83d081"
+                                    android:textSize="@dimen/small_text" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/chat_attachment_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/defultSpacing"
+                                android:layout_marginRight="@dimen/defultSpacing"
+                                android:background="@drawable/curved_shadow_view"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/activity_vertical_margin"
+                                android:paddingRight="@dimen/activity_vertical_margin"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/chat_attachment_icon"
+                                    android:layout_width="@dimen/icon_25dp"
+                                    android:layout_height="@dimen/icon_25dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="2dp"
+                                    app:srcCompat="@drawable/ic_attchmtns" />
+
+                                <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/chat_attachment_icon"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="@string/attachment"
+                                    android:textColor="#83D081"
+                                    android:textSize="@dimen/small_text" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bottom_lay_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/chatbox_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/defultSpacing"
+                    android:layout_toEndOf="@+id/bottom_view"
+                    android:layout_toRightOf="@+id/bottom_view"
+                    android:background="@drawable/shadowview">
+
+                    <include layout="@layout/chat_box_layout" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <include layout="@layout/customer_info_layout" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

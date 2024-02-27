@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+            android:id="@+id/contact_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mounika"
+            android:textColor="@color/contactNameColor"
+            android:textSize="@dimen/medium_text"/>
+
+            <LinearLayout
+                android:id="@+id/closeContactLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:gravity="end">
+
+
+                <ImageView
+                    android:id="@+id/info_close_icon1"
+                    android:layout_width="@dimen/cancel_image_size"
+                    android:layout_height="@dimen/cancel_image_size"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/cancel" />
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                    android:id="@+id/contact_close1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close "
+                    android:textAllCaps="false"
+                    android:textColor="@color/agentCountColor"
+                    android:textSize="@dimen/small_text" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cust. ID : "
+                android:textColor="@color/CustometIdTitleColor"
+                android:textSize="@dimen/small_text"/>
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:id="@+id/customer_id_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56557677"
+                android:textColor="@color/CustometIdColor"
+                android:textSize="@dimen/small_text"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/contact_layout_shadow_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/contact_caller_bg"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/ic_contact_phone_call"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contact_number_bg"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:id="@+id/contact_number_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="56557677"
+                        android:singleLine="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/ContactNumberColor"
+                        android:textSize="@dimen/small_text"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/copyNumberLayout"
+                    android:layout_width="@dimen/contact_item_circle_size"
+                    android:layout_height="@dimen/contact_item_circle_size"
+                    android:background="@drawable/contact_item_bg"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/contact_item_icon_size"
+                        android:layout_height="@dimen/contact_item_icon_size"
+                        android:layout_marginTop="3dp"
+                        app:srcCompat="@drawable/copy" />
+
+                </LinearLayout>
+
+                <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/copy"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textColor="@color/more_option_text_color"
+                    android:textSize="@dimen/very_small_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/confirmNumberLayout"
+                        android:layout_width="@dimen/contact_item_circle_size"
+                        android:layout_height="@dimen/contact_item_circle_size"
+                        android:background="@drawable/contact_item_bg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/contact_item_icon_size"
+                            android:layout_height="@dimen/contact_item_icon_size"
+                            android:layout_marginTop="3dp"
+                            app:srcCompat="@drawable/confirm" />
+
+                    </LinearLayout>
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/confirm"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textColor="@color/more_option_text_color"
+                        android:textSize="@dimen/very_small_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/requestNumberLayout"
+                        android:layout_width="@dimen/contact_item_circle_size"
+                        android:layout_height="@dimen/contact_item_circle_size"
+                        android:background="@drawable/contact_item_bg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/contact_item_icon_size"
+                            android:layout_height="@dimen/contact_item_icon_size"
+                            android:layout_marginTop="3dp"
+                            app:srcCompat="@drawable/request_number" />
+
+                    </LinearLayout>
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/request"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textColor="@color/more_option_text_color"
+                        android:textSize="@dimen/very_small_text" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/contact_layout_shadow_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/contact_caller_bg"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:srcCompat="@drawable/mail"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contact_number_bg"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:id="@+id/contact_email_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="manu@gmail.com"
+                        android:singleLine="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/ContactNumberColor"
+                        android:textSize="@dimen/small_text"/>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/copyEmailLayout"
+                        android:layout_width="@dimen/contact_item_circle_size"
+                        android:layout_height="@dimen/contact_item_circle_size"
+                        android:background="@drawable/contact_item_bg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/contact_item_icon_size"
+                            android:layout_height="@dimen/contact_item_icon_size"
+                            android:layout_marginTop="3dp"
+                            app:srcCompat="@drawable/copy" />
+
+                    </LinearLayout>
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/copy"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textColor="@color/more_option_text_color"
+                        android:textSize="@dimen/very_small_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/confirmEmailLayout"
+                        android:layout_width="@dimen/contact_item_circle_size"
+                        android:layout_height="@dimen/contact_item_circle_size"
+                        android:background="@drawable/contact_item_bg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/contact_item_icon_size"
+                            android:layout_height="@dimen/contact_item_icon_size"
+                            android:layout_marginTop="3dp"
+                            app:srcCompat="@drawable/confirm" />
+
+                    </LinearLayout>
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/confirm"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textColor="@color/more_option_text_color"
+                        android:textSize="@dimen/very_small_text" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/requestEmailLayout"
+                        android:layout_width="@dimen/contact_item_circle_size"
+                        android:layout_height="@dimen/contact_item_circle_size"
+                        android:background="@drawable/contact_item_bg"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/contact_item_icon_size"
+                            android:layout_height="@dimen/contact_item_icon_size"
+                            android:layout_marginTop="3dp"
+                            app:srcCompat="@drawable/mail_request" />
+
+                    </LinearLayout>
+
+                    <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/request"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textColor="@color/more_option_text_color"
+                        android:textSize="@dimen/very_small_text" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/closeContactLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal">
+
+
+            <ImageView
+                android:id="@+id/info_close_icon"
+                android:layout_width="@dimen/cancel_image_size"
+                android:layout_height="@dimen/cancel_image_size"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_close" />
+
+            <com.tvisha.click2magic.CustomFontViews.PoppinsMediumTextView
+                android:id="@+id/contact_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close "
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:textColor="@color/agentCountColor"
+                android:textSize="@dimen/small_text" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

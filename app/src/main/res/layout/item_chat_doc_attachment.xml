@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/doc_attachment_layout"
+    android:layout_width="@dimen/chatMessageReplyContactWidth"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|start"
+    android:layout_margin="3dp"
+    android:background="@drawable/item_other_doc_background"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/image_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/defultSpacing"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/attachment_preview"
+            android:layout_width="@dimen/chatReplyAttchmentSize"
+            android:layout_height="@dimen/chatReplyAttchmentSize"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/defultSpacing"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+
+    <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+        android:id="@+id/attachment_fileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/download_data"
+        android:layout_toRightOf="@+id/image_preview"
+        android:maxLength="25"
+        android:textColor="@color/message_text_color"
+        android:textSize="@dimen/normal_text" />
+
+    <RelativeLayout
+        android:id="@+id/download_data"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/download_doc_attachment"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:padding="3dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_download_new" />
+
+        <com.tvisha.click2magic.CustomFontViews.PoppinsTextView
+            android:id="@+id/progress_count"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
