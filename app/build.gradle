@@ -71,8 +71,8 @@ dependencies {
 //        transitive = true
 //    }
 
-    debugImplementation 'com.amitshekhar.android:debug-db:1.0.4'
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
     //firebase
 //    implementation 'com.google.firebase:firebase-core:16.0.8'
