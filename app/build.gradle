@@ -46,19 +46,19 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.0'
     testImplementation 'junit:junit:4.12'
     // optional - Test helpers for LiveData
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
 
     // Network
-    implementation 'com.google.code.gson:gson:2.6.2'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
     // Google
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
     implementation 'com.google.android.gms:play-services-places:16.0.0'
@@ -83,7 +83,6 @@ dependencies {
         exclude group: 'com.google.firebase', module: 'firebase-iid'
     }
     //for storing list in shared preferences
-    implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.google.android.gms:play-services-gcm:10.2.1'
     //Simple rating bar
     implementation 'com.iarcuschin:simpleratingbar:0.1.5'
@@ -94,18 +93,18 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.14'
     implementation 'com.amazonaws:aws-android-sdk-s3:2.6.14'
     implementation 'com.amazonaws:aws-android-sdk-ddb:2.6.14'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
     implementation('com.amazonaws:aws-android-sdk-mobile-client:2.6.7@aar') { transitive = true }
     implementation 'com.amazonaws:aws-android-sdk-s3:2.6.+'
     implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.+'
     //crop
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
     //compress
-    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'id.zelory:compressor:2.1.1'
     //to get file path
     implementation 'in.gauriinfotech:commons:1.0.8'
     //to load an image
-    implementation 'com.theartofdev:fast-image-loader:0.8.+'
+    implementation 'com.theartofdev:fast-image-loader:0.8.4'
     //tooltip
     implementation 'com.github.douglasjunior:android-simple-tooltip:0.2.2'
 
