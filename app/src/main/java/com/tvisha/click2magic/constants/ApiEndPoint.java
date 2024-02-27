@@ -25,12 +25,12 @@ public class ApiEndPoint {
 
 
     //testing
-    public static final String SOCKET_PATH = "http://testing.click2magic.com:8080";
+   /* public static final String SOCKET_PATH = "http://testing.click2magic.com:8080";
     public static final String BASE_PATH = "http://testing.click2magic.com/api/user/";
-
+*/
  // live
-/*  public static final String SOCKET_PATH = "https://click2magic.com:8080";
-    public final static String BASE_PATH = "https://www.click2magic.com/api/user/";*/
+  public static final String SOCKET_PATH = "https://click2magic.com:8080";
+    public final static String BASE_PATH = "https://www.click2magic.com/api/user/";
 
 
 //    public static final String FILE_IMAGE_BASE = "https://s3.amazonaws.com/click.2.magic/";
