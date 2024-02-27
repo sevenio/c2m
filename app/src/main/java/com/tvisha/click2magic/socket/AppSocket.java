@@ -884,7 +884,7 @@ public class AppSocket extends Application implements  Application.ActivityLifec
                 mSocket.off(Socket.EVENT_CONNECT, onConnect);
                 mSocket.off(Socket.EVENT_DISCONNECT, onDisconnect);
                 mSocket.off(Socket.EVENT_CONNECT_ERROR, onConnectError);
-                mSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//                mSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
                 //mounika
                 mSocket.off(SocketConstants.AGENT_STATUS_UPDATED, agentStatusUpdated);
                 mSocket.off(SocketConstants.AGENT_STATUS_UPDATE, agentStatusUpdate);
@@ -927,7 +927,7 @@ public class AppSocket extends Application implements  Application.ActivityLifec
                 mSocket.on(Socket.EVENT_CONNECT, onConnect);
                 mSocket.on(Socket.EVENT_DISCONNECT, onDisconnect);
                 mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
-                mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//                mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
 
                 //mounika
                 mSocket.on(SocketConstants.AGENT_STATUS_UPDATED, agentStatusUpdated);

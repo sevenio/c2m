@@ -1155,7 +1155,7 @@ public class SocketService extends Service {
                 mSocket.on(Socket.EVENT_CONNECT, onConnect);
                 mSocket.on(Socket.EVENT_DISCONNECT, onDisconnect);
                 mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
-                mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//                mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
 
                 //mounika
                 mSocket.on(SocketConstants.AGENT_STATUS_UPDATED, agentStatusUpdated);
@@ -1207,7 +1207,7 @@ public class SocketService extends Service {
                 tmSocket.on(Socket.EVENT_CONNECT,onConnect);
                 tmSocket.on(Socket.EVENT_DISCONNECT,onDisconnect);
                 tmSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
-                tmSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//                tmSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
                 tmSocket.on(SocketConstants.EVENT_SEND_MESSAGE, sendMessage);
                 tmSocket.on(SocketConstants.EVENT_SEND_ATTACHMENT, sendAttachment);
                 tmSocket.on(SocketConstants.EVENT_MESSAGE_DELIVERED, messageDelivered);
@@ -1254,7 +1254,7 @@ public class SocketService extends Service {
                 mSocket.off(Socket.EVENT_CONNECT, onConnect);
                 mSocket.off(Socket.EVENT_DISCONNECT, onDisconnect);
                 mSocket.off(Socket.EVENT_CONNECT_ERROR, onConnectError);
-                mSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//                mSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
 
                 //mounika
                 mSocket.off(SocketConstants.AGENT_STATUS_UPDATED, agentStatusUpdated);
@@ -1294,7 +1294,7 @@ public class SocketService extends Service {
                 tmSocket.off(Socket.EVENT_CONNECT, onConnect);
                 tmSocket.off(Socket.EVENT_DISCONNECT, onDisconnect);
                 tmSocket.off(Socket.EVENT_CONNECT_ERROR, onConnectError);
-                tmSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//                tmSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
                 tmSocket.off(SocketConstants.EVENT_SEND_MESSAGE, sendMessage);
                 tmSocket.off(SocketConstants.EVENT_SEND_ATTACHMENT, sendAttachment);
                 tmSocket.off(SocketConstants.EVENT_MESSAGE_DELIVERED, messageDelivered);

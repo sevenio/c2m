@@ -99,7 +99,7 @@ public class SocketIo {
             socket.on(Socket.EVENT_CONNECT, onConnect);
             socket.on(Socket.EVENT_DISCONNECT, onDisconnect);
             socket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
-            socket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//            socket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
             socket.on(SocketConstants.EVENT_SEND_MESSAGE, sendMessage);
             socket.on(SocketConstants.EVENT_SEND_ATTACHMENT, sendAttachment);
             socket.on(SocketConstants.EVENT_MESSAGE_DELIVERED, messageDelivered);
@@ -128,7 +128,7 @@ public class SocketIo {
             socket.off(Socket.EVENT_CONNECT,onConnect);
             socket.off(Socket.EVENT_DISCONNECT,onDisconnect);
             socket.off(Socket.EVENT_CONNECT_ERROR, onConnectError);
-            socket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+//            socket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
             socket.off(SocketConstants.EVENT_SEND_MESSAGE, sendMessage);
             socket.off(SocketConstants.EVENT_MESSAGE_DELIVERED, messageDelivered);
             socket.off(SocketConstants.EVENT_MESSAGE_READ, messageRead);
