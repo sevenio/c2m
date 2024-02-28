@@ -1,7 +1,11 @@
 package com.tvisha.click2magic.socket;
 
-import android.content.Context;
+import static java.util.Collections.singletonMap;
 
+import android.content.Context;
+import android.util.Log;
+
+import com.google.gson.Gson;
 import com.tvisha.click2magic.Helper.Helper;
 import com.tvisha.click2magic.Helper.Session;
 import com.tvisha.click2magic.constants.ApiEndPoint;
@@ -11,8 +15,7 @@ import org.json.JSONArray;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
-
-
+import io.socket.engineio.client.transports.WebSocket;
 
 
 public class SocketIo {
@@ -53,6 +56,8 @@ public class SocketIo {
               Helper.getInstance().LogDetails("socket params:token",tmToken+"tmUserId "+tmUserId);
               IO.Options opts = new IO.Options();
               opts.forceNew = true;
+              opts.transports = new String[]{WebSocket.NAME};
+//              opts.auth = singletonMap("access_token", tmToken);
               opts.query = "user_id="+tmUserId+"&token="+tmToken+"&platform="+platform;
               opts.reconnection = true;
               socket = IO.socket(ApiEndPoint.TM_SERVER_SOCKET_PATH,opts);
@@ -202,6 +207,7 @@ public class SocketIo {
     private Emitter.Listener onConnectError = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
+            Log.d("ganga", new Gson().toJson(args));
             Helper.getInstance().LogDetails("socket_connect error tm",args[0].toString());
         }
     };

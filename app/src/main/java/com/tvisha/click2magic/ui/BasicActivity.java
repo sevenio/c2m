@@ -128,6 +128,7 @@ public abstract class BasicActivity extends AppCompatActivity {
 
             if(appSocket==null)
             appSocket = (AppSocket) getApplication();
+
             mSocket=appSocket.getSocketInstance();
             if (mSocket == null) {
                 appSocket.disconnectSocket();
@@ -160,6 +161,7 @@ public abstract class BasicActivity extends AppCompatActivity {
         try{
             if(appSocket==null)
                 appSocket = (AppSocket) getApplication();
+
               tmSocket=appSocket.getTmSocketInstance();
 
         if (tmSocket == null) {

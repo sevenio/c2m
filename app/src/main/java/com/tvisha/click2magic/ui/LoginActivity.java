@@ -116,6 +116,9 @@ public class LoginActivity extends AppCompatActivity  {
 
           getdeviceId();
 
+        email_edit_txt.setText("humera.t@tvisha.in");
+        password_edit_txt.setText("humera.t74");
+
 
     }
 

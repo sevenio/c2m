@@ -6,11 +6,13 @@ plugins {
     id 'com.google.gms.google-services'
 
 }
+
 android {
+    namespace "com.tvisha.click2magic"
     compileSdk 34
     defaultConfig {
         applicationId "com.tvisha.click2magic"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdk 34
         versionCode 15
         versionName "1.1.5"
@@ -46,7 +48,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation('io.socket:socket.io-client:2.0.0') {
+    implementation('io.socket:socket.io-client:1.0.0') {
         exclude group: 'org.json', module: 'json'
     }
     // Android support libraries

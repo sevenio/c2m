@@ -9,9 +9,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.provider.Settings;
+import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
+import com.google.gson.Gson;
 import com.tvisha.click2magic.Handlers.HandlerHolder;
 import com.tvisha.click2magic.Helper.Helper;
 import com.tvisha.click2magic.Helper.Session;
@@ -31,8 +33,7 @@ import java.util.List;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
-
-
+import io.socket.engineio.client.transports.WebSocket;
 
 
 public class AppSocket extends Application implements  Application.ActivityLifecycleCallbacks{
@@ -150,6 +151,7 @@ public class AppSocket extends Application implements  Application.ActivityLifec
 
                 IO.Options opts = new IO.Options();
                 opts.forceNew = true;
+                opts.transports = new String[]{WebSocket.NAME};
                 opts.query = "DJdZj6NIMFU1Q=" + siteToken + "&guest_id="+userId+"&type="+agent+"&server_token="+serverToken;
                 opts.reconnection = true;
                 mSocket = IO.socket(ApiEndPoint.SOCKET_PATH, opts);
@@ -253,6 +255,8 @@ public class AppSocket extends Application implements  Application.ActivityLifec
     private Emitter.Listener onConnectError = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
+            Log.d("ganga", new Gson().toJson(args));
+
             Helper.getInstance().LogDetails("Socket On connect error c2m"," "+args[0].toString());
         }
     };
